@@ -1,4 +1,3 @@
-from time import sleep
 from message_queue import MassageQueue
 from sender import Sender
 
@@ -11,15 +10,6 @@ if __name__ == "__main__":
 
     messages = []
 
-    image_file = open("./1.tif", "rb")
-
-    image = image_file.read()
-
-    image = "a" * 100000
-
-    image = image.encode("utf-8")
-
-    messages.append("image:".encode() + image)
     messages.append("instruction:start".encode())
     messages.append("data:123".encode())
     messages.append("log:this is a log".encode())
